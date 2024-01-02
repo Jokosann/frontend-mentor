@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+	--f-family: 'Poppins', sans-serif;
+
+	--red-primary: hsl(0, 78%, 62%);
+	--cyan-primary: hsl(180, 62%, 55%);
+	--orange-primary: hsl(34, 97%, 64%);
+	--blue-primary: hsl(212, 86%, 64%);
+
+	--dark-blue-nn: hsl(234, 12%, 34%);
+	--grayish-blue-nn: hsl(229, 6%, 66%);
+	--very-l-gray-nn: hsl(0, 0%, 98%);
+
+	--f-size: 15px;
+	--f-size-secendary: 13px;
+	--f-size-header-mobile: 24px;
+	--f-size-mobile: 12px;
+
+	--f-weight-light: 200;
+	--f-weight-normal: 400;
+	--f-weight-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--very-l-gray-nn);
+	font-family: var(--f-family);
+}
+
+.container {
+	max-width: 1224px;
+	margin-inline: auto;
+}
+
+/* header */
+header {
+	text-align: center;
+	max-width: 550px;
+	margin-inline: auto;
+	padding-block: 1rem;
+}
+
+h1 {
+	font-weight: 200;
+	color: var(--dark-blue-nn);
+	line-height: 1.5;
+	margin-bottom: 0;
+}
+
+h1 > span {
+	font-weight: var(--f-weight-bold);
+	color: var(--dark-blue-nn);
+}
+
+header p {
+	font-size: var(--f-size);
+	color: var(--grayish-blue-nn);
+}
+
+/* main */
+main {
+	padding: 1rem;
+}
+
+.wrapper {
+	max-width: 100%;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+.col {
+	display: grid;
+}
+
+.col-1 {
+	align-items: center;
+}
+
+.col-2 {
+	gap: 2rem;
+}
+
+.col-3 {
+	align-items: center;
+}
+
+.container-card {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+	overflow: hidden;
+}
+
+.card {
+	border-top: 5px solid;
+	padding: 1.5rem;
+}
+
+.card h3 {
+	margin-block: 0;
+	color: var(--dark-blue-nn);
+}
+
+.card p {
+	font-size: var(--f-size-secendary);
+	color: var(--grayish-blue-nn);
+	margin-top: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.card img {
+	display: block;
+	margin-inline-start: auto;
+}
+
+.card-1 {
+	border-color: var(--cyan-primary);
+}
+
+.card-2 {
+	border-color: var(--red-primary);
+}
+.card-3 {
+	border-color: var(--orange-primary);
+}
+.card-4 {
+	border-color: var(--blue-primary);
+}
+
+@media screen and (max-width: 420px) {
+	.container {
+		max-width: calc(100vw - 2rem);
+	}
+
+	header {
+		max-width: 100%;
+		padding-inline: 1rem;
+	}
+
+	header h1 {
+		font-size: var(--f-size-header-mobile);
+	}
+
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.card p {
+		font-size: var(--f-size-mobile);
+	}
+}
+
+@media screen and (min-width: 970px) {
+	.wrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

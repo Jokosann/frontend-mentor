@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--f-family);
+}
+
+:root {
+	--yellow: hsl(47, 88%, 63%);
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 7%);
+	--grey: hsl(0, 0%, 50%);
+
+	--f-size: 16px;
+
+	--f-normal: 600;
+	--f-bold: 800;
+
+	--f-family: 'Figtree', sans-serif;
+}
+
+@font-face {
+	font-family: 'Figtree';
+	src: url(/assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	min-height: 100vh;
+	background-color: var(--yellow);
+}
+
+.card {
+	max-width: 380.56px;
+	width: 100%;
+	padding: 1.3rem;
+	overflow: hidden;
+	border-radius: 20px;
+	background-color: var(--white);
+	border: 0.1rem solid var(--black);
+	box-shadow: 7px 7px 0 var(--black);
+	cursor: pointer;
+}
+.card:active {
+	box-shadow: 13px 13px 0 var(--black);
+}
+.card .avatar {
+	max-width: 100%;
+	border-radius: 11px;
+}
+.card .btn {
+	background-color: var(--yellow);
+	border: 1px solid var(--yellow);
+	color: var(--black);
+	font-weight: var(--f-bold);
+	border-radius: 5px;
+	padding: 6px 10px;
+	margin-top: 18px;
+	margin-bottom: 13px;
+	font-size: var(--f-size);
+}
+.card .publish {
+	font-size: var(--f-size);
+	font-weight: var(--f-normal);
+}
+.card .title {
+	margin: 20px 0;
+	font-weight: var(--f-bold);
+}
+.card:active .title {
+	color: var(--yellow);
+}
+.card .fill {
+	font-size: var(--f-size);
+	color: var(--grey);
+	line-height: 1.4;
+	margin-bottom: 20px;
+}
+.card .profil {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.profil .profil-img {
+	width: 30px;
+}
+.profil .profil-name {
+	font-size: var(--f-size);
+	font-weight: var(--f-bold);
+}
+
+.attribution {
+	font-family: var(--f-family);
+}
+
+@media screen and (max-width: 420px) {
+	.card {
+		width: calc(100vw - 2rem);
+	}
+	.card .avatar {
+		max-width: 100%;
+	}
+}
